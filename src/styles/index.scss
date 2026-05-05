@@ -13,7 +13,7 @@ $days: (
 );
 
 @each $day, $column in $days {
-  .calendar--start-day--#{$day} .calendar__day:first-child {
+  .calendar--start-day-#{$day} .calendar__day:first-child {
     margin-left: ($column - 1) * ($day-size + $gap);
   }
 }
@@ -28,6 +28,7 @@ body {
 
 .calendar {
   display: flex;
+  box-sizing: border-box;
   flex-wrap: wrap;
   gap: $gap;
   padding: $padding;
